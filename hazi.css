@@ -4,40 +4,37 @@
   background-color: beige;
 }
 
-h1:first-letter
-{
+h1:first-letter{
   font-weight: bold;
   font-size: 24;
   color: lightblue;
 }
 
-.header_basic
-{
+.header_basic{
   font-family: "Lucida Handwriting", cursive;
   color: lightskyblue;
 }
 
-h1
-{
+h1{
   font-size: 32px;
   text-shadow: 2px 2px #7a94a4;
 }
 
 
-h2
-{
+h2{
   font-size: 28px;
+  margin: 10px
 }
 
 
-h3
-{
+h3{
   font-size: 26px;
+  margin: 15px;
 }
 
-h4
-{
+h4{
   font-size: 24px;
+  margin: 20px;
 }
 
 p{
@@ -45,13 +42,13 @@ p{
   font-size: 16px;
   color:cadetblue;
 }
+
 .link_basic{
   font-size: 14px;
   line-height: 5;
 }
 
-.highlight
-{
+.highlight{
   background-color: yellow;
 }
 
@@ -71,4 +68,9 @@ details{
 
 hr {
   color: #6baeb0;
+}
+
+li{
+  padding: 5px;
+  margin: 15px;
 }
