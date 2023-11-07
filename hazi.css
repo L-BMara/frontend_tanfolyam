@@ -52,10 +52,6 @@ p{
   background-color: yellow;
 }
 
-ul{
-  font-size: 16px;
-  color:cadetblue;
-}
 details{
   font-size: 14px;
   color:cadetblue;
@@ -68,6 +64,12 @@ details{
 
 hr {
   color: #6baeb0;
+}
+
+ul{
+  font-size: 16px;
+  color:cadetblue;
+  list-style-type: square;
 }
 
 li{
