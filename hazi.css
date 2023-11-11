@@ -187,3 +187,7 @@ button{
 hr {
   color: #7ab4d8;
 }
+
+.hidden{
+  display: none;
+}
