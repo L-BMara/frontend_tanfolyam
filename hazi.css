@@ -1,11 +1,12 @@
 .basic {
   padding: 5px;
   margin: 10px;
+  background-color: rgb(163, 33, 33);
 }
 
 h1:first-letter{
   font-weight: bold;
-  font-size: 24;
+  font-size: 48px;
   color: #7ab4d8;
 }
 
@@ -18,7 +19,6 @@ h1{
   font-size: 32px;
   text-shadow: 2px 2px #7a94a4;
 }
-
 
 h2{
   font-size: 28px;
@@ -61,10 +61,6 @@ details{
   color:cadetblue;
 }
 
-hr {
-  color: #6baeb0;
-}
-
 ul{
   font-size: 16px;
   color:cadetblue;
@@ -78,16 +74,15 @@ li{
 
 details > ul {
   font-size: 12px;
-
-}
-
-details > li {
-  padding: 4px;
-  margin: 20px;
   font-style: italic;
 }
 
-img {
+details > li {
+  padding: 1px;
+  margin: 20px;
+}
+
+img{
   margin: 15px;
   width: 250px;
   float: left;
@@ -108,3 +103,87 @@ img {
   width: 100px;
 }
 
+.footer_nav{
+  backdrop-filter: invert(100%);
+  border-radius: 15px;
+}
+
+
+div{
+  margin: 0 auto;
+  text-align: justify;
+  width: 1000px;
+  padding: 5px;
+}
+
+.div_border{
+  border-radius: 15px;
+  border: 1px solid aqua;
+}
+
+select{
+  appearance: none;
+}
+.rejtett{
+  display: none;
+}
+
+label{
+  margin: 10px;
+  font-size: 16px;
+  color:rgb(88, 153, 156);
+}
+
+input{
+  font-size: 16px;
+  color:rgb(88, 153, 156);;
+  background: transparent;
+}
+
+.label_message{
+  display: block;
+  color:rgb(88, 153, 156);
+}
+
+textarea{
+  margin: 15px;
+  font-size: 16px;
+  color:rgb(88, 153, 156);;
+  background: transparent;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+button{
+  margin: 15px;
+  font-size: 16px;
+  color:rgb(88, 153, 156);;
+  background: transparent;
+}
+
+select{
+  font-size: 16px;
+  color:rgb(88, 153, 156);;
+  background: transparent;
+  border-radius: 15px;
+
+}
+
+button{
+  border-radius: 15px;
+  text-align: center;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 14px 20px;
+  color: #4187b3;
+}
+
+.label_tolsa{
+  width: 20em; 
+  display: inline-block;
+}
+
+hr {
+  color: #7ab4d8;
+}
