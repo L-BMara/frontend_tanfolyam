@@ -1,0 +1,183 @@
+.set_padding_margin{
+  padding: 5px;
+  margin: 10px;
+}
+
+h1:first-letter{
+  font-weight: bold;
+  font-size: 48px;
+  color: #7ab4d8;
+}
+
+.set_head{
+  font-family: "Lucida Handwriting", cursive;
+  color: lightskyblue;
+}
+
+h1{
+  font-size: 32px;
+  text-shadow: 2px 2px #7a94a4;
+}
+
+h2{
+  font-size: 28px;
+  margin: 10px
+}
+
+
+h3{
+  font-size: 26px;
+  margin: 15px;
+}
+
+h4{
+  font-size: 24px;
+  margin: 20px;
+}
+
+p{
+  margin: 15px;
+  font-size: 16px;
+  color:cadetblue;
+}
+
+.set_link{
+  font-size: 14px;
+  line-height: 5;
+}
+
+.highlighter{
+  background-color: yellow;
+}
+
+details{
+  font-size: 14px;
+  color:cadetblue;
+}
+
+details > p{
+  font-size: 12px;
+  color:cadetblue;
+}
+
+ul{
+  font-size: 16px;
+  color:cadetblue;
+  list-style-type: square;
+}
+
+li{
+  padding: 5px;
+  margin: 15px;
+}
+
+details > ul {
+  font-size: 12px;
+  font-style: italic;
+}
+
+details > li {
+  padding: 1px;
+  margin: 20px;
+}
+
+img{
+  margin: 15px;
+  width: 250px;
+  float: left;
+}
+
+.image_right_side{
+  width: 250px;
+  float: right;
+}
+
+.set_background{
+  background-image: url("bracsa_hatter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.viola_violin_different{
+  width: 100px;
+}
+
+.set_footer_header{
+  backdrop-filter: invert(100%);
+  border-radius: 15px;
+}
+
+
+.set_div{
+  margin: 0 auto;
+  text-align: justify;
+  width: 1000px;
+  padding: 5px;
+}
+
+.div_border{
+  border-radius: 15px;
+  border: 1px solid aqua;
+}
+
+select{
+  appearance: none;
+}
+
+label{
+  margin: 10px;
+  font-size: 16px;
+  color: rgb(88, 153, 156);
+}
+
+input{
+  font-size: 16px;
+  color: rgb(88, 153, 156);
+  background: transparent;
+}
+
+.label_message{
+  display: block;
+  color: rgb(88, 153, 156);
+}
+
+textarea{
+  margin: 15px;
+  font-size: 16px;
+  color: rgb(88, 153, 156);
+  background: transparent;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+select{
+  font-size: 16px;
+  color: rgb(88, 153, 156);
+  background: transparent;
+  border-radius: 15px;
+
+}
+
+button{
+  border-radius: 15px;
+  text-align: center;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 14px 20px;
+  color: #4187b3;
+}
+
+.label_tolsa{
+  width: 20em; 
+  display: inline-block;
+}
+
+hr {
+  color: #7ab4d8;
+}
+
+.hidden{
+  display: none;
+}
+
