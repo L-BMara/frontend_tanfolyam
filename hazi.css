@@ -88,7 +88,6 @@ img{
 }
 
 .image_right_side{
-  width: 250px;
   float: right;
 }
 
@@ -181,3 +180,175 @@ hr {
   display: none;
 }
 
+a:visited{
+  color: rgb(55, 151, 83);
+}
+
+a:hover{
+  color: rgb(110, 110, 67);
+}
+
+a:link{
+  color: rgb(5, 116, 38);
+}
+
+.set_menu{
+  display: block;
+  background: transparent;
+  padding: 5px;
+  text-decoration: none;
+  font-family: "Lucida Handwriting", cursive;
+  position: fixed;
+  top: 20px;
+  font-size: 16px;
+  width: 300px;
+  color: rgb(130, 208, 212);
+}
+
+.set_menu li{
+  display: block;
+  color: rgb(130, 208, 212);
+}
+
+nav > ul {
+  padding: 2px;
+}
+
+nav > ul > li {
+  padding: 2px;
+}
+
+
+nav > ul > li > ul > li{
+  font-size: 14px;
+  padding: 1px;
+}
+
+@media screen and (max-width: 1600px){
+  .hide{
+    display: none;
+  }
+  .re_size{
+    margin: 5px;
+    text-align: left;
+    width: auto;
+    padding: 5px;
+  }
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 1599px){
+  .hide{
+    display: none;
+  }
+  .re_size{
+    margin: 5px;
+    text-align: left;
+    width: auto;S
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  img{
+    width: 75px;
+  }
+
+  textarea{
+    margin: 5px;
+    font-size: 14px;
+    padding: 5px;
+    width: 300px;
+  }  
+
+  button{
+    margin: 5px;
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 500px) {
+  .hide{
+    display: none;
+  }
+  .re_size{
+    margin: 2px;
+    text-align: left;
+    width: auto;
+    padding: 2px;
+    font-size: 12px;
+  }
+
+  p{
+    font-size: 12PX;    
+  }
+
+  h1{
+    font-size: 28px;
+  }
+
+  h2{
+    font-size: 26px;
+  }
+
+  h3{
+    font-size: 24px;
+  }
+
+  h4{
+    font-size: 22px;
+  }
+
+  img{
+    width: 50px;
+  }
+
+  textarea{
+    margin: 2px;
+    font-size: 12px;
+    padding: 2px;
+    width: 300px;
+  }  
+
+  button{
+    margin: 2px;
+    font-size: 12px;
+    padding: 2px;
+  }
+}
+
+.contents_title{
+  font-size: 32px;
+}
+
+.contents{
+  font-size: 14px;
+  font-family: auto;
+}
+
+li > a:link{
+  color: rgb(130, 208, 212);
+}
+
+
+li > a:visited{
+  color: rgb(30, 113, 117);
+}
+
+li > a:hover{
+  color: rgb(170, 210, 212);
+}
+
+.dark-mode {
+  background-color: black;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.mode_set_button
+{
+    font-size: 10px;
+}
