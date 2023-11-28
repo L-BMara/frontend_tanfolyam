@@ -106,17 +106,22 @@ img{
   border-radius: 15px;
 }
 
-
-.set_div{
-  margin: 0 auto;
-  text-align: justify;
-  width: 1000px;
-  padding: 5px;
-}
-
 .div_border{
   border-radius: 15px;
   border: 1px solid aqua;
+}
+
+.set_center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.set_center div
+{
+  width: 700px;
+  padding: 5px;
+  margin: 5px;
 }
 
 select{
@@ -201,7 +206,7 @@ a:link{
   position: fixed;
   top: 20px;
   font-size: 16px;
-  width: 300px;
+  width: 200px;
   color: rgb(130, 208, 212);
 }
 
@@ -224,6 +229,32 @@ nav > ul > li > ul > li{
   padding: 1px;
 }
 
+.set_flex{
+  display: flex;
+  margin-left: auto;
+  width: 90%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.set_others{
+  margin: 0 auto;
+  text-align: justify;
+  width: 1500px;
+  padding: 5px;
+}
+
+.set_left
+{
+  width: 50%;
+}
+
+.set_right
+{
+  width: 50%;
+  margin-left: auto;
+}
+
 @media screen and (max-width: 1600px){
   .hide{
     display: none;
@@ -236,7 +267,6 @@ nav > ul > li > ul > li{
   }
 }
 
-
 @media screen and (min-width: 500px) and (max-width: 1599px){
   .hide{
     display: none;
@@ -244,9 +274,16 @@ nav > ul > li > ul > li{
   .re_size{
     margin: 5px;
     text-align: left;
-    width: auto;S
+    width: auto;
     padding: 5px;
     font-size: 10px;
+  }
+
+  .set_div{
+    margin: 0 auto;
+    text-align: justify;
+    width: 1000px;
+    padding: 5px;
   }
 
   img{
@@ -303,6 +340,10 @@ nav > ul > li > ul > li{
     width: 50px;
   }
 
+  li{
+    font-size: 12PX;  
+  }
+
   textarea{
     margin: 2px;
     font-size: 12px;
@@ -314,6 +355,13 @@ nav > ul > li > ul > li{
     margin: 2px;
     font-size: 12px;
     padding: 2px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .set_background{
+    background-color: black;
+    background-image: none;
   }
 }
 
@@ -337,18 +385,4 @@ li > a:visited{
 
 li > a:hover{
   color: rgb(170, 210, 212);
-}
-
-.dark-mode {
-  background-color: black;
-}
-
-.light-mode {
-  background-color: white;
-  color: black;
-}
-
-.mode_set_button
-{
-    font-size: 10px;
 }
