@@ -1,5 +1,18 @@
-.set_padding_margin{
-  padding: 5px;
+:root {
+  --brand_front: cadetblue;
+  --form_color: rgb(88, 153, 156);
+  --def_border_rad: 15px;
+  --def_h_font_family: "Lucida Handwriting", cursive;
+  --margin_m: 15px;
+  --padding_margin_s: 5px;
+  --padding_margin_xs: 2px;
+  --def_background: transparent;
+  --fontsize_m: 16px;
+  --fontsize_s: 12px;
+}
+
+.set_padding_margin_sargin{
+  padding: var(--padding_margin_s);
   margin: 10px;
 }
 
@@ -10,24 +23,28 @@ h1:first-letter{
 }
 
 .set_head{
-  font-family: "Lucida Handwriting", cursive;
+  font-family: var(--def_h_font_family);
   color: lightskyblue;
 }
 
 h1{
-  font-size: 32px;
   text-shadow: 2px 2px #7a94a4;
+  animation: h1_anim 1s ease-in-out 2 forwards;
 }
 
 h2{
-  font-size: 28px;
-  margin: 10px
+  font-size: 18px;
+  margin: 10px;
+  transition: font-size 1s ease-in-out;
 }
 
+h2:hover{
+  font-size: 28px;
+}
 
 h3{
   font-size: 26px;
-  margin: 15px;
+  margin: var(--margin_m);
 }
 
 h4{
@@ -36,9 +53,10 @@ h4{
 }
 
 p{
-  margin: 15px;
-  font-size: 16px;
-  color:cadetblue;
+  margin: var(--margin_m);
+  font-size: var(--fontsize_m);
+  color: var(--brand_front);
+  transition: font-size 1s;
 }
 
 .set_link{
@@ -52,27 +70,27 @@ p{
 
 details{
   font-size: 14px;
-  color:cadetblue;
+  color:var(--brand_front);;
 }
 
 details > p{
-  font-size: 12px;
-  color:cadetblue;
+  font-size: var(--fontsize_s);
+  color:var(--brand_front);;
 }
 
 ul{
-  font-size: 16px;
-  color:cadetblue;
+  font-size: var(--fontsize_m);
+  color:var(--brand_front);;
   list-style-type: square;
 }
 
 li{
-  padding: 5px;
-  margin: 15px;
+  padding: var(--padding_margin_s);
+  margin: var(--margin_m);
 }
 
 details > ul {
-  font-size: 12px;
+  font-size: var(--fontsize_s);
   font-style: italic;
 }
 
@@ -82,9 +100,14 @@ details > li {
 }
 
 img{
-  margin: 15px;
-  width: 250px;
+  margin: var(--margin_m);
+  width: 150px;
   float: left;
+  transition: width 1s ease-in-out;
+}
+
+img:hover{
+  width: 250px;
 }
 
 .image_right_side{
@@ -103,11 +126,11 @@ img{
 
 .set_footer_header{
   backdrop-filter: invert(100%);
-  border-radius: 15px;
+  border-radius: var(--def_border_rad);;
 }
 
 .div_border{
-  border-radius: 15px;
+  border-radius: var(--def_border_rad);;
   border: 1px solid aqua;
 }
 
@@ -120,8 +143,8 @@ img{
 .set_center div
 {
   width: 700px;
-  padding: 5px;
-  margin: 5px;
+  padding: var(--padding_margin_s);
+  margin: var(--padding_margin_s);
 }
 
 select{
@@ -130,42 +153,42 @@ select{
 
 label{
   margin: 10px;
-  font-size: 16px;
-  color: rgb(88, 153, 156);
+  font-size: var(--fontsize_m);
+  color: var(--form_color);
 }
 
 input{
-  font-size: 16px;
-  color: rgb(88, 153, 156);
-  background: transparent;
+  font-size: var(--fontsize_m);
+  color: var(--form_color);
+  background: var(--def_background);
 }
 
 .label_message{
   display: block;
-  color: rgb(88, 153, 156);
+  color: var(--form_color);
 }
 
 textarea{
-  margin: 15px;
-  font-size: 16px;
-  color: rgb(88, 153, 156);
-  background: transparent;
-  border-radius: 15px;
-  padding: 5px;
+  margin: var(--margin_m);
+  font-size: var(--fontsize_m);
+  color: var(--form_color);
+  background: var(--def_background);
+  border-radius: var(--def_border_rad);
+  padding: var(--padding_margin_s);
 }
 
 select{
-  font-size: 16px;
-  color: rgb(88, 153, 156);
-  background: transparent;
-  border-radius: 15px;
+  font-size: var(--fontsize_m);
+  color: var(--form_color);
+  background: var(--def_background);
+  border-radius: var(--def_border_rad);
 
 }
 
 button{
-  border-radius: 15px;
+  border-radius: var(--def_border_rad);
   text-align: center;
-  background: transparent;
+  background: var(--def_background);
   font-size: 18px;
   cursor: pointer;
   padding: 14px 20px;
@@ -181,7 +204,7 @@ hr {
   color: #7ab4d8;
 }
 
-.hidden{
+.hidden{ont-size: 16px;
   display: none;
 }
 
@@ -199,15 +222,16 @@ a:link{
 
 .set_menu{
   display: block;
-  background: transparent;
-  padding: 5px;
+  background: var(--def_background);
+  padding: var(--padding_margin_s);
   text-decoration: none;
-  font-family: "Lucida Handwriting", cursive;
+  font-family: var(--def_h_font_family);
   position: fixed;
   top: 20px;
-  font-size: 16px;
+  font-size: var(--fontsize_m);
   width: 200px;
   color: rgb(130, 208, 212);
+  transition: font-size 1s;
 }
 
 .set_menu li{
@@ -216,11 +240,11 @@ a:link{
 }
 
 nav > ul {
-  padding: 2px;
+  padding: var(--padding_margin_xs);
 }
 
 nav > ul > li {
-  padding: 2px;
+  padding: var(--padding_margin_xs);
 }
 
 
@@ -241,7 +265,7 @@ nav > ul > li > ul > li{
   margin: 0 auto;
   text-align: justify;
   width: 1500px;
-  padding: 5px;
+  padding: var(--padding_margin_s);
 }
 
 .set_left
@@ -260,10 +284,10 @@ nav > ul > li > ul > li{
     display: none;
   }
   .re_size{
-    margin: 5px;
+    margin: var(--padding_margin_s);
     text-align: left;
     width: auto;
-    padding: 5px;
+    padding: var(--padding_margin_s);
   }
 }
 
@@ -272,10 +296,10 @@ nav > ul > li > ul > li{
     display: none;
   }
   .re_size{
-    margin: 5px;
+    margin: var(--padding_margin_s);
     text-align: left;
     width: auto;
-    padding: 5px;
+    padding: var(--padding_margin_s);
     font-size: 10px;
   }
 
@@ -283,7 +307,7 @@ nav > ul > li > ul > li{
     margin: 0 auto;
     text-align: justify;
     width: 1000px;
-    padding: 5px;
+    padding: var(--padding_margin_s);
   }
 
   img{
@@ -291,16 +315,16 @@ nav > ul > li > ul > li{
   }
 
   textarea{
-    margin: 5px;
+    margin: var(--padding_margin_s);
     font-size: 14px;
-    padding: 5px;
+    padding: var(--padding_margin_s);
     width: 300px;
   }  
 
   button{
-    margin: 5px;
+    margin: var(--padding_margin_s);
     font-size: 14px;
-    padding: 5px;
+    padding: var(--padding_margin_s);
   }
 }
 
@@ -309,15 +333,15 @@ nav > ul > li > ul > li{
     display: none;
   }
   .re_size{
-    margin: 2px;
+    margin: var(--padding_margin_xs);
     text-align: left;
     width: auto;
-    padding: 2px;
-    font-size: 12px;
+    padding: var(--padding_margin_xs);
+    font-size: var(--fontsize_s);
   }
 
   p{
-    font-size: 12PX;    
+    font-size: var(--fontsize_s);    
   }
 
   h1{
@@ -341,20 +365,20 @@ nav > ul > li > ul > li{
   }
 
   li{
-    font-size: 12PX;  
+    font-size: var(--fontsize_s);  
   }
 
   textarea{
-    margin: 2px;
-    font-size: 12px;
-    padding: 2px;
+    margin: var(--padding_margin_xs);
+    font-size: var(--fontsize_s);
+    padding: var(--padding_margin_xs);
     width: 300px;
   }  
 
   button{
-    margin: 2px;
-    font-size: 12px;
-    padding: 2px;
+    margin: var(--padding_margin_xs);
+    font-size: var(--fontsize_s);
+    padding: var(--padding_margin_xs);
   }
 }
 
@@ -370,9 +394,15 @@ nav > ul > li > ul > li{
 }
 
 .contents{
-  font-size: 14px;
+  font-size: 12px;
   font-family: auto;
+  transition: font-size 1s ease-in-out;
 }
+
+.contents:hover{
+  font-size: 14px;
+}
+
 
 li > a:link{
   color: rgb(130, 208, 212);
@@ -385,4 +415,11 @@ li > a:visited{
 
 li > a:hover{
   color: rgb(170, 210, 212);
+}
+
+@keyframes h1_anim{
+  0% {font-size: 22px;}
+  25% {font-size: 32px;}
+  50% {font-size: 42px;}
+  100% {font-size: 32px;}
 }
