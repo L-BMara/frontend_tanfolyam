@@ -144,7 +144,7 @@
 #classic:checked ~ #page {
   --def_brand_font: var(--classic_brand_font);
   --def_background_color: var(--classic_background_color);
-  --def_theme: var(--dark_theme);
+  --def_theme: var(--classic_theme);
   --def_background-image: var(--classic_background-image);
   --def_background-repeat: var(--classic_background-repeat);
   --def_background-size: var(--classic_background-size);
@@ -160,6 +160,27 @@
   --def_padding_margin_xs: var(--classic_padding_margin_xs);
   --def_hr_color: var(--classic_hr_color);
   --def_form_color: var(--classic_form_color);
+}
+
+#classic_dark:checked ~ #page {
+  --def_brand_font: var(--dark_brand_font);
+  --def_background_color: var(--dark_background_color);
+  --def_theme: var(--dark_theme);
+  --def_background-image: var(--classic_background-image);
+  --def_background-repeat: var(--classic_background-repeat);
+  --def_background-size: var(--classic_background-size);
+  --def_border: var(--dark_border);
+  --def_highlighter: var(--classic_highlighter);
+  --def_head_color: var(--dark_head_color);
+  --def_a_link_color: var(--dark_a_link_color);
+  --def_fontsize_sm: var(--classic_fontsize_sm);
+  --def_fontsize_m: var(--classic_fontsize_m);
+  --def_h_font_family: var(--classic_h_font_family);
+  --def_padding_margin_s: var(--classic_padding_margin_s);
+  --def_border_rad: var(--classic_border_rad);
+  --def_padding_margin_xs: var(--classic_padding_margin_xs);
+  --def_hr_color: var(--dark_hr_color);
+  --def_form_color: var(--dark_form_color);
 }
 
 /* change theme mode */
