@@ -30,7 +30,8 @@
 --orig_border: 1px solid aqua;
 --orig_highlighter: yellow;
 --orig_a_link_color: rgb(130, 208, 212);
-
+--orig_a_visited: rgb(94, 184, 211);
+--orig_a_hover: rgb(170, 210, 212);
 
 /*dark_mode*/
 --dark_brand_font: white;
@@ -49,6 +50,8 @@
 --dark_border: 1px solid white;
 --dark_highlighter: red;
 --dark_a_link_color: white;
+--dark_a_visited: rgb(211, 243, 221);
+--dark_a_hover: rgb(180, 195, 196);
 
 
 
@@ -82,6 +85,8 @@
 --classic_border: 1px solid rgb(93, 90, 138);
 --classic_highlighter: yellow;
 --classic_a_link_color: rgb(118, 113, 194);
+--classic_a_visited: rgb(173, 169, 226);
+--classic_a_hover: rgb(164, 162, 185);
 
 
 
@@ -116,6 +121,8 @@
 --def_border: var(--orig_border);
 --def_highlighter: var(--orig_highlighter);
 --def_a_link_color: var(--orig_a_link_color);
+--def_a_visited: var(--orig_a_visited);
+--def_a_hover: var(--orig_a_hover);
 }
 
 /* Dark mode */
@@ -138,6 +145,8 @@
   --def_padding_margin_xs: var(--orig_padding_margin_xs);
   --def_hr_color: var(--dark_hr_color);
   --def_form_color: var(--dark_form_color);
+  --def_a_visited: var(--dark_a_visited);
+  --def_a_hover: var(--dark_a_hover);
 }
 
 /* Classic mode */
@@ -160,6 +169,8 @@
   --def_padding_margin_xs: var(--classic_padding_margin_xs);
   --def_hr_color: var(--classic_hr_color);
   --def_form_color: var(--classic_form_color);
+  --def_a_visited: var(--classic_a_visited);
+  --def_a_hover: var(--classic_a_hover);
 }
 
 #classic_dark:checked ~ #page {
@@ -181,6 +192,8 @@
   --def_padding_margin_xs: var(--classic_padding_margin_xs);
   --def_hr_color: var(--dark_hr_color);
   --def_form_color: var(--dark_form_color);
+  --def_a_visited: var(--dark_a_visited);
+  --def_a_hover: var(--dark_a_hover);
 }
 
 /* change theme mode */
@@ -330,35 +343,37 @@ border: var(--def_border);
 }
 
 .set_head{
-font-family: var(--def_h_font_family);
-color: var(--def_head_color);
+  font-family: var(--def_h_font_family);
+  color: var(--def_head_color);
 }
 
 .contents_title{
-font-size: 32px;
+  font-size: 32px;
 }
 
 .contents{
-font-size: var(--def_fontsize_sm);
-font-family: var(--def_h_font_family);
-transition: font-size 1s ease-in-out;
+  font-size: var(--def_fontsize_sm);
+  font-family: var(--def_h_font_family);
+  transition: font-size 1s ease-in-out;
+  color: var(--def_a_link_color);
 }
 
 .contents:hover{
-font-size: var(--def_fontsize_m);
+  font-size: var(--def_fontsize_m);
+  color: var(--def_a_hover);
 }
 
 li > a:link{
-color: var(--def_a_link_color);
+  color: var(--def_a_link_color);
 }
 
 
 li > a:visited{
-color: rgb(30, 113, 117);
+  color: var(--def_a_visited);
 }
 
 li > a:hover{
-color: rgb(170, 210, 212);
+  color: var(--def_a_hover);
 }
 
 
@@ -516,16 +531,17 @@ display: none;
 
 
 a:visited{
-color: rgb(55, 151, 83);
+color: var(--def_a_visited);
 }
 
 a:hover{
-color: rgb(110, 110, 67);
+color: var(--def_a_hover);
 }
 
 a:link{
-color: rgb(5, 116, 38);
+color: var(--def_a_link_color);
 }
+
 @media screen and (max-width: 1600px){
   .hide{
     display: none;
