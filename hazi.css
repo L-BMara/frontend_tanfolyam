@@ -37,6 +37,8 @@
   --orig_justify_margin: auto;
   --orig_left_with: 50%;
   --orig_right_with: 50%;
+  --orig_form_display: none;
+  --orig_bootstrap_form_display: auto;
 
   /*dark_mode*/
   --dark_brand_font: white;
@@ -73,7 +75,7 @@
   --classic_fontsize_m: 14px;
   --classic_fontsize_sm: 12px;
   --classic_fontsize_s: 10px;
-  --classic_div_width: 1000px;
+  --classic_div_width: 80%;
   --classic_hr_color: rgb(145, 139, 224);
   --classic_p_font_family: auto;
   --classic_head_color: rgb(96, 93, 145);
@@ -93,7 +95,7 @@
   --classic_a_visited: rgb(173, 169, 226);
   --classic_a_hover: rgb(164, 162, 185);
   --classic_display: block;
-  --classic_width: 1500px;
+  --classic_width: 80%;
   --classic_algin: justify;
   --classic_justify_margin: 0 auto;
   --classic_left_with: 100%;
@@ -138,6 +140,15 @@
   --def_justify_margin: var(--orig_justify_margin);
   --def_left_with: var(--orig_left_with);
   --def_right_with: var(--orig_right_with);
+  --def_form_display: var(--orig_form_display);
+  --def_bootstrap_form_display: var(--orig_bootstrap_form_display);
+}
+
+/*boostrap on off*/
+
+#bootstrap:checked ~ #page {
+  --def_form_display: auto;
+  --def_bootstrap_form_display: none;
 }
 
 
@@ -315,7 +326,7 @@ p{
 .set_others{
   margin: 0 auto;
   text-align: justify;
-  width: 1500px;
+  width: 80%;
   padding: var(--def_padding_margin_s);
 }
 
@@ -332,7 +343,7 @@ p{
   font-family: var(--def_h_font_family);
   position: fixed;
   font-size: var(--def_fontsize_m);
-  width: 190px;
+  width: 10%;
   color: var(--def_brand_font);
   transition: font-size 1s;
 }
@@ -414,7 +425,7 @@ li > a:hover{
 .set_others{
   margin: 0 auto;
   text-align: justify;
-  width: 1500px;
+  width: 80%;
   padding: var(--def_padding_margin_s);
 }
 
@@ -444,7 +455,7 @@ img:hover{
 }
 
 .viola_violin_different{
-  width: 100px;
+  width: 80%;
 }
 
 details{
@@ -565,20 +576,17 @@ a:link{
   color: var(--def_a_link_color);
 }
 
-@media screen and (max-width: 1600px){
-  .hide{
-    display: none;
-  }
-  .re_size{
-    margin: var(--def_padding_margin_s);
-    text-align: left;
-    width: auto;
-    padding: var(--def_padding_margin_s);
-  }
+
+.hidden_form{
+  display: var(--def_form_display);
+}
+
+.hidden_boostrap{
+  display: var(--def_bootstrap_form_display);
 }
 
 @media screen and (min-width: 500px) and (max-width: 1599px){
-  .hide{
+  .hide_menu{
     display: none;
   }
   .re_size{
@@ -592,7 +600,7 @@ a:link{
   .set_div{
     margin: 0 auto;
     text-align: justify;
-    width: 1000px;
+    width: 80%;
     padding: var(--def_padding_margin_s);
   }
 
@@ -615,7 +623,7 @@ a:link{
 }
 
 @media screen and (min-width: 360px) and (max-width: 500px) {
-  .hide{
+  .hide_menu{
     display: none;
   }
   .re_size{
@@ -667,6 +675,7 @@ a:link{
     padding: var(--def_padding_margin_xs);
   }
 }
+
 @keyframes h1_anim{
   0% {font-size: 22px;}
   25% {font-size: 32px;}
