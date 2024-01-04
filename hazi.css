@@ -198,7 +198,7 @@
   --def_form_color: var(--dark_form_color);
   --def_a_visited: var(--dark_a_visited);
   --def_a_hover: var(--dark_a_hover);
-  @if #classic:checked {
+   #classic:checked ~ #page  {
     --def_a_link_color: var(--classic_a_link_color);
     --def_fontsize_sm: var(--classic_fontsize_sm);
     --def_fontsize_m: var(--classicfontsize_m);
@@ -213,7 +213,7 @@
     --def_left_with: var(--classic_left_with);
     --def_right_with: var(--classic_right_with);
   }
-  @else{
+  #normal:checked ~ #page {
     --def_a_link_color: var(--dark_a_link_color);
     --def_fontsize_sm: var(--orig_fontsize_sm);
     --def_fontsize_m: var(--orig_fontsize_m);
