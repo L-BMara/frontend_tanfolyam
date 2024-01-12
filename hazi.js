@@ -62,7 +62,6 @@ function addReadingTimeToHtml(p_name, p_where)
         v_paragraph.textContent = "A cikk szakasz " + v_page_count_word + " szót tartalmaz. Az elolvasása " + v_page_read_speed_min + " percbe fog telni.";
     }
     v_place.append(v_paragraph);
-
 }
 
 function searcher(){
