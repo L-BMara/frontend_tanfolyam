@@ -7,6 +7,7 @@ function countWords(p_name) {
     let v_html= document.getElementById(p_name);
     /*objektumból csak a szöveges tartalom kiszedése, valmaint vágása. Collection 0. eleme tartalmazza a html részletet ami nekem kell
     A text egy tömb amibe tároljuk a honlap szöveges tartalmát*/
+    console.log(v_html);
     let v_text = v_html.textContent.split(" ");
     let v_count = 0;
 
@@ -96,6 +97,10 @@ function searcher(){
             }
         }
     }
+    addReadingTimeToHtml("arctile", "#readspeed");
+    addReadingTimeToHtml("div_violin", "#readspeed_violin");
+    addReadingTimeToHtml("div_viola", "#readspeed_viola");
+    addReadingTimeToHtml("div_chello", "#readspeed_chello");
 }
 
 function addSeracher ()
@@ -118,7 +123,6 @@ function addSeracher ()
     v_search_btn.innerHTML = '<i class = "fa fa-search"></i>';
     v_searcherColumn.append(v_search_btn);
 
-   
 }
 
 function search(){
@@ -137,8 +141,8 @@ function search(){
 }
 
 addReadingTimeToHtml("arctile", "#readspeed");
-addReadingTimeToHtml("violin", "#readspeed_violin");
-addReadingTimeToHtml("viola", "#readspeed_viola");
-addReadingTimeToHtml("chello", "#readspeed_chello");
+addReadingTimeToHtml("div_violin", "#readspeed_violin");
+addReadingTimeToHtml("div_viola", "#readspeed_viola");
+addReadingTimeToHtml("div_chello", "#readspeed_chello");
 
 search();
