@@ -5,6 +5,7 @@
         <title>Vonós hangszerek</title>
         <link rel="stylesheet" href="hazi.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="set_div re_size">
@@ -21,6 +22,8 @@
         <input type="checkbox" name="change_mode" id="dark">
         <label for="bootstrap" class="change_ch_label">Boostrap kikapcsolás</label>    
         <input type="checkbox" name="change_mode" id="bootstrap">
+        <div id="search">
+        </div>
         <div id="page">
             <nav class="set_menu hide_menu">
                 <ul>
@@ -71,11 +74,16 @@
                     </li>    
                 </ul>
             </div>
-            <div class="set_flex">
-                <div class="set_div re_size">
+            <!--Mivel nekem lényegében nagy címsorom több van ezért a teljeset a taralomjegyzék alá tettem be. A címsorokhoz tartozót minden címsor alá-->
+            <div class="set_flex" id="readspeed">
+            </div>
+            <div class="set_flex" id="arctile">
+                <div class="set_div re_size" id="div_violin">
                     <hr>
                     <a id="violin"></a>
                     <h1 class="set_head">Hegedű</h1>
+                    <div class="set_flex" id="readspeed_violin">
+                    </div>
                     <hr>
                     <div class="set_left">    
                         <img src="hegeduhatter.jpg" alt="hegedű">
@@ -131,10 +139,12 @@
                                 <p>A brácsahúrok felépítésben megegyeznek a hegedűhúrokkal, de az "a" húr mindig több rétegben fonott, műanyag vagy fémszál maggal. A zenekarban általában használt drága csellóhúrok többnyire fém magra fonottak, de természetesen gyártanak műanyagra font gyönyörű hangú csellóhúrokat is.</p>
                     </div>
                 </div>  
-                <div class="set_div re_size">
+                <div class="set_div re_size" id="div_viola">
                     <hr>
                     <a id="viola"></a>
                     <h1 class="set_head">Brácsa</h1>
+                    <div class="set_flex" id="readspeed_viola">
+                    </div>
                     <hr>
                     <div class="div_border">
                         <a id="viola_violin_diff"></a>
@@ -181,10 +191,12 @@
                             <p>Gyerekek általában nem tanulnak brácsázni, hanem később (amikor már elég nagyok) hegedűről térnek át brácsára. Extrém esetekben kisebb hegedűre raknak brácsahúrokat, és így állítanak elő brácsát. Mint láthattuk, brácsából csak „egészes” létezik. Persze különböző méretűek léteznek, egyes kisebb méretű típusok hosszúságra megegyezhetnek egy nagyobb hegedűvel.</p>
                     </div> 
                 </div> 
-                <div class="set_div re_size">
+                <div class="set_div re_size" id="div_chello">
                     <hr>
                     <a id="chello"></a>
                     <h1 class="set_head">Cselló</h1>
+                    <div class="set_flex" id="readspeed_chello">
+                    </div>
                     <hr>
                     <div class="set_left">
                         <img src="csello_hatter.webp" alt="Cselló">
@@ -340,5 +352,6 @@
                 <a href="#ugras_fel" class="set_link"> Ugrás az oldal tetejére </a>
             </footer>
         </div>      
+        <script src="hazi.js"></script>
     </body>
 </html>
