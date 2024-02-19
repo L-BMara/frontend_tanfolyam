@@ -19,7 +19,7 @@
   --orig_hr_color: #7ab4d8;
   --orig_p_font_family: auto;
   --orig_head_color: lightskyblue;
-  --orig_text_shadow: #7a94a4;
+  --orig_text_shadow: 2px 2px #7a94a4;
   --orig_img_size: 250px;
   --orig_button_color: #4187b3;
   --orig_background-image: url("bracsa_hatter.jpg");
@@ -35,12 +35,12 @@
   --orig_a_visited: rgb(94, 184, 211);
   --orig_a_hover: rgb(170, 210, 212);
   --orig_width: 80%;
-  --orig_algin: auto;
+  --orig_algin: right;
   --orig_justify_margin: auto;
   --orig_left_with: 50%;
   --orig_right_with: 50%;
   --orig_form_display: none;
-  --orig_bootstrap_form_display: auto;
+  --orig_bootstrap_form_display: block;
   --origin_h2_fontsize: 18px;
   --origin_h2_font_hover: 30px;
   --orig_back_drop: invert(100%);
@@ -192,12 +192,12 @@
   --access_a_visited: var(--v_color_black);
   --access_a_hover: var(--v_color_black);
   --access_width: 70%;
-  --access_algin: auto;
+  --access_algin: right;
   --access_justify_margin: auto;
   --access_left_with: 100%;
   --access_right_with: 100%;
   --access_form_display: none;
-  --access_bootstrap_form_display: auto;
+  --access_bootstrap_form_display: block;
   --access_div_width: 70%;
   --access_h2_fontsize: 30px;
   --access_h2_font_hover: 30px;
@@ -208,7 +208,7 @@
 /*boostrap on off*/
 
 #bootstrap:checked ~ #page {
-  --def_form_display: auto;
+  --def_form_display: block;
   --def_bootstrap_form_display: none;
 }
 
@@ -401,7 +401,7 @@ h1:first-letter{
 }
 
 h1{
-  text-shadow: 2px 2px var(--def_text_shadow);
+  text-shadow: var(--def_text_shadow);
   animation: var(--def_animation);
 }
 
