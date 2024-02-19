@@ -12,29 +12,31 @@
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Vonós hangszerek</title>
-        <link rel="stylesheet" href="hazi.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="hazi.css">
     </head>
     <body>
         <div class="set_div re_size">
             <a id="ugras_fel"> </a> 
             <nav class="set_footer_header">
-                <a href="#ugras_le" class="set_link"> Ugrás az oldal aljára </a>   
+                <a href="#ugras_le" class="set_link" id="jump_down"> Ugrás az oldal aljára </a>   
             </nav>
         </div>
+        <input type="radio" checked class="change_mode" name="change_mode" id="access">
+        <label for="access" title = "Beállítja akadálymentesítettre oldal stílusát" class="change_label">Akadálymentesített</label> 
         <input type="radio" class="change_mode" name="change_mode" id="normal">
-        <label for="normal" class="change_label">Normal</label>
+        <label for="normal" title = "Beállítja alapra az oldal stílusát" class="change_label">Normal</label>
         <input type="radio" class="change_mode" name="change_mode" id="classic">
-        <label for="classic" class="change_label">Klasszikus</label>
-        <label for="classic" class="change_ch_label">Dark</label>    
-        <input type="checkbox" name="change_mode" id="dark">
+        <label for="classic" title = "Beállítja klasszikusra oldal stílusát"  class="change_label">Klasszikus</label>
+        <label for="dark" class="change_ch_label">Dark</label>   
+        <input type="checkbox" title = "Beállítja sötét stílusra az oldalt" name="change_mode" id="dark">
         <label for="bootstrap" class="change_ch_label">Boostrap kikapcsolás</label>    
-        <input type="checkbox" name="change_mode" id="bootstrap">
+        <input type="checkbox" title = "kiveszi a bootstrap formot és visszaállítja az eredetit" name="change_mode" id="bootstrap">
         <div id="search">
         </div>
         <div id="page">
-            <nav class="set_menu hide_menu">
+            <nav class="set_menu hide_menu" id="menu">
                 <ul>
                     <li>Rólunk
                         <ul>
@@ -86,7 +88,7 @@
             <!--Mivel nekem lényegében nagy címsorom több van ezért a teljeset a taralomjegyzék alá tettem be. A címsorokhoz tartozót minden címsor alá-->
             <div class="set_flex" id="readspeed">
             </div>
-            <div class="set_flex" id="arctile">
+            <article class="set_flex" id="arctile">
                 <div class="set_div re_size" id="div_violin">
                     <hr>
                     <a id="violin"></a>
@@ -261,7 +263,7 @@
                                 <p>Az ideális játékhoz megfelelő méretű hangszerre van szükség, különösen a zenetanulás hosszú folyamatának elején. A felnőtt méretűt egészes csellónak nevezik. Létezik női egészes, amit neveznek hétnyolcadosnak is. Mivel a zenetanulást leggyakrabban már gyermekkorban elkezdik, így többféle méret kell, hogy kövesse a gyermek növekedését. A nyolcados és a negyedes elég ritka, kevesen kezdik 7-8 éves kor alatt a csellótanulást, elvétve látni csak ilyen apró csellókat. A növendékek általában feles csellóval találkoznak először, természetesen a kor, testmagasság szerint eltérő lehet a gyermekek hangszerigénye. A háromnegyedes már a végső, felnőtt csellóhoz készíti elő a növendéket.</p>
                     </div>  
                 </div>         
-            </div> 
+            </article> 
             <div class="set_div re_size set_center">
                 <div class="div_border hidden_form">
                     <form action="?" name="Cikk küldése ismerősnek." id="usrform">
@@ -339,15 +341,11 @@
                             </div>
                             <label class="control-label col-sm-2" for="message_2">Szeretnél megosztani velünk valmait, üzenj nekünk bátran:</label>
                                 <div class="col-sm-10">
-                                    <textarea rows="4" cols="50" name="message_2" id="message_2" form="usrform"></textarea>
+                                    <textarea title = "Üzenetet, véleményt, javaslatokat lehet tenni az üzemeltetőjének/cikk írójának" rows="4" cols="50" name="message_2" id="message_2" form="usrform"></textarea>
                                 </div>
-                                <div class="hidden">
-                                    <label class="control-label col-sm-2" for="h_email_2">Rejtett Email cím</label>
-                                    <input class="form-control" type="email" name="h_email_2" id="h_email_2">
-                                </div>    
                             <div class="form-group">        
                                 <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-default">Küldés</button>
+                                <button role="button" type="submit" aria-label = "Elküldi a megadott információkat az oldal üzemeltetőjének/cikk írójának" class="btn btn-default">Küldés</button>
                                 </div>
                             </div>
                         </div>  
@@ -358,9 +356,10 @@
         <div class="set_div re_size">    
             <a id="ugras_le"> </a>   
             <footer class="set_footer_header">
-                <a href="#ugras_fel" class="set_link"> Ugrás az oldal tetejére </a>
+                <a href="#ugras_fel" class="set_link" id="jump_up"> Ugrás az oldal tetejére </a>
             </footer>
         </div>      
         <script src="hazi.js"></script>
+        <script src="akadalymentesiteto.js"></script>
     </body>
 </html>
