@@ -12,29 +12,31 @@
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Vonós hangszerek</title>
-        <link rel="stylesheet" href="hazi.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="hazi.css">
     </head>
     <body>
         <div class="set_div re_size">
             <a id="ugras_fel"> </a> 
             <nav class="set_footer_header">
-                <a href="#ugras_le" class="set_link"> Ugrás az oldal aljára </a>   
+                <a href="#ugras_le" class="set_link" id="jump_down"> Ugrás az oldal aljára </a>   
             </nav>
         </div>
+        <input type="radio" checked class="change_mode" name="change_mode" id="access">
+        <label for="access" title = "Beállítja akadálymentesítettre oldal stílusát" aria-label="Beállítja akadálymentesítettre oldal stílusát ez a default egyébként" class="change_label">Akadálymentesített</label> 
         <input type="radio" class="change_mode" name="change_mode" id="normal">
-        <label for="normal" class="change_label">Normal</label>
+        <label for="normal" title = "Beállítja alapra az oldal stílusát" aria-label="Beállítja az alap elgondolásra az oldal stílusát, ez volt az eredeti" class="change_label">Normal</label>
         <input type="radio" class="change_mode" name="change_mode" id="classic">
-        <label for="classic" class="change_label">Klasszikus</label>
-        <label for="classic" class="change_ch_label">Dark</label>    
-        <input type="checkbox" name="change_mode" id="dark">
+        <label for="classic" title = "Beállítja klasszikusra oldal stílusát" aria-label="Beállítja klasszikusra oldal stílusát, kicsit egyszerűbb kcisit konzervatívabb"  class="change_label">Klasszikus</label>
+        <label for="dark" class="change_ch_label">Dark</label>   
+        <input type="checkbox" title = "Beállítja sötét stílusra az oldalt" aria-label="Sötétmódba teszi az oldalt a stílusnak megfelelően" name="change_mode" id="dark">
         <label for="bootstrap" class="change_ch_label">Boostrap kikapcsolás</label>    
-        <input type="checkbox" name="change_mode" id="bootstrap">
+        <input type="checkbox" title = "kiveszi a bootstrap formot és visszaállítja az eredetit" aria-label="2 féle form érhető el a bootstrap és az eredeti elgondolás, ez a checkbox kikapcsolja a formon a bootstrap és beállítja" name="change_mode" id="bootstrap">
         <div id="search">
         </div>
         <div id="page">
-            <nav class="set_menu hide_menu">
+            <nav class="set_menu hide_menu" id="menu" aria-label="A menü csak normál és classic módokban jelenik meg, akadálymentesítettben vlamaint egy bizonoys méret alatt már nem">
                 <ul>
                     <li>Rólunk
                         <ul>
@@ -59,7 +61,7 @@
             </div>
             <div class="set_div re_size set_others">
                 <p>Tartalom jegyzék</p>
-                <ul class="set_head contents_title">
+                <ul class="set_head contents_title" aria-label="kattintható tartalomjegyzék">
                     <li class="contents"><a href="#violin" target=”_blank”>Hegedű (új oldalon nyílik meg)</a>
                         <ul>
                         <li class="contents"><a href="#violin_etim">Hegedű etimológia</a></li>
@@ -86,7 +88,7 @@
             <!--Mivel nekem lényegében nagy címsorom több van ezért a teljeset a taralomjegyzék alá tettem be. A címsorokhoz tartozót minden címsor alá-->
             <div class="set_flex" id="readspeed">
             </div>
-            <div class="set_flex" id="arctile">
+            <article class="set_flex" id="arctile" aria-label="itt kezdődik a cikk">
                 <div class="set_div re_size" id="div_violin">
                     <hr>
                     <a id="violin"></a>
@@ -261,28 +263,28 @@
                                 <p>Az ideális játékhoz megfelelő méretű hangszerre van szükség, különösen a zenetanulás hosszú folyamatának elején. A felnőtt méretűt egészes csellónak nevezik. Létezik női egészes, amit neveznek hétnyolcadosnak is. Mivel a zenetanulást leggyakrabban már gyermekkorban elkezdik, így többféle méret kell, hogy kövesse a gyermek növekedését. A nyolcados és a negyedes elég ritka, kevesen kezdik 7-8 éves kor alatt a csellótanulást, elvétve látni csak ilyen apró csellókat. A növendékek általában feles csellóval találkoznak először, természetesen a kor, testmagasság szerint eltérő lehet a gyermekek hangszerigénye. A háromnegyedes már a végső, felnőtt csellóhoz készíti elő a növendéket.</p>
                     </div>  
                 </div>         
-            </div> 
+            </article> 
             <div class="set_div re_size set_center">
                 <div class="div_border hidden_form">
                     <form action="?" name="Cikk küldése ismerősnek." id="usrform">
                         <div>
-                            <label class="label_tolsa" for="name">Név</label>
+                            <label class="label_tolsa" for="name" aria-label="Név megdása kötelező mező">Név</label>
                             <input type="text" name="name" id="name" placeholder="Írd ide a neved" required>
                         </div>
                         <div>
-                            <label class="label_tolsa" for="phonenum">Telefonszám</label>
+                            <label class="label_tolsa" for="phonenum" aria-label="telefonszám megdása, nem kötelező">Telefonszám</label>
                             <input type="tel" name="phonenum" id="phonenum" placeholder="+36204265555">
                         </div>
                         <div>
-                            <label class="label_tolsa" for="email">Email cím</label>
+                            <label class="label_tolsa" for="email" aria-label="email cím megadása kötelező mező, így tudunk válaszolni az esetleges kérdésekre">Email cím</label>
                             <input type="email" name="email" id="email" placeholder="peldaemail@gmail.com" required>
                         </div>
                         <div>
-                            <label class="label_tolsa" for="age">Kor</label>
+                            <label class="label_tolsa" for="age" aria-label="Életkor megadása, nem kötelező, statisztika gyűjtéshez kell">Kor</label>
                             <input type="number" name="age" id="age" placeholder="Add meg a korod" min="0" max="120">
                         </div>
                         <div>
-                            <label class="label_tolsa" for="playing">Játszol valmaiylen vonós hangszeren?</label>
+                            <label class="label_tolsa" for="playing" aria-label="Nem kötelező, kiválasztható hogy játszik-e valamilyen hangszeren, statisztika gyűjtés">Játszol valmaiylen vonós hangszeren?</label>
                             <select name="playing" id="playing">
                                 <option value="">----Kérem válasszon----</option>
                                 <option value="">Igen, hegedűn</option>
@@ -294,7 +296,7 @@
                             </select>
                         </div>
                         <div>
-                            <label class="label_message" for="message">Szeretnél megosztani velünk valmait, üzenj nekünk bátran:</label>
+                            <label class="label_message" for="message" aria-label="Üzenet megadása, nem kötelező, kérdések, megjegyzések">Szeretnél megosztani velünk valmait, üzenj nekünk bátran:</label>
                             <textarea rows="4" cols="50" name="message" id="message" form="usrform"></textarea>
                         </div>
                         <div class="hidden">
@@ -302,30 +304,30 @@
                             <input type="email" name="h_email" id="h_email">
                         </div>
                         <div>
-                            <button type="submit">Küldés</button>
+                            <button type="submit" aria-label="A küldés gomb megnyomásával a form elküldi a megadott adatokat hozzánk, így fel tudjuk azokat dolgozni, esetleg válaszolni a kérdésekre.">Küldés</button>
                         </div> 
                     </form>
                 </div>  
                 <div class="hidden_boostrap">
                     <form class="form-horizontal" name="Cikk küldése ismerősnek." action="?">
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="name_2">Név:</label>
+                            <label class="control-label col-sm-2" for="name_2" aria-label="Név megdása kötelező mező">Név:</label>
                             <div class="col-sm-10">
                             <input type="email" class="form-control" id="name_2" placeholder="Ird ide a neved" name="name_2" required>
                             </div>
-                            <label class="control-label col-sm-2" for="phone_2">Telefon:</label>
+                            <label class="control-label col-sm-2" for="phone_2" aria-label="telefonszám megdása, nem kötelező">Telefon:</label>
                             <div class="col-sm-10">
                             <input type="tel" class="form-control" id="phone_2" placeholder="Add meg a telefonszámod" name="phone_2">
                             </div>
-                            <label class="control-label col-sm-2" for="email_2">Email:</label>
+                            <label class="control-label col-sm-2" for="email_2" aria-label="email cím megadása kötelező mező, így tudunk válaszolni az esetleges kérdésekre">Email:</label>
                             <div class="col-sm-10">
                             <input type="email" class="form-control" id="email_2" placeholder="pelda@gmail.com" name="email_2" required>
                             </div>
-                            <label class="control-label col-sm-2" for="age_2">Korod:</label>
+                            <label class="control-label col-sm-2" for="age_2" aria-label="Életkor megadása, nem kötelező, statisztika gyűjtéshez kell">Korod:</label>
                             <div class="col-sm-10">
                             <input type="number" class="form-control" id="age_2" placeholder="Add emg a korod" name="age_2" min="0" max="120">
                             </div>
-                            <label class="control-label col-sm-2" for="playing_2">Játszol valamiylen vonsó hangszeren?</label>
+                            <label class="control-label col-sm-2" for="playing_2" aria-label="Nem kötelező, kiválasztható hogy játszik-e valamilyen hangszeren, statisztika gyűjtés">Játszol valamiylen vonsó hangszeren?</label>
                             <div class="col-sm-10">
                                 <select class="form-control" id="playing_2" name="playing_2">
                                     <option value="">----Kérem válasszon----</option>
@@ -337,17 +339,13 @@
                                     <option value="">Nem</option>
                                 </select>
                             </div>
-                            <label class="control-label col-sm-2" for="message_2">Szeretnél megosztani velünk valmait, üzenj nekünk bátran:</label>
+                            <label class="control-label col-sm-2" for="message_2" aria-label="Üzenet megadása, nem kötelező, kérdések, megjegyzések">Szeretnél megosztani velünk valmait, üzenj nekünk bátran:</label>
                                 <div class="col-sm-10">
-                                    <textarea rows="4" cols="50" name="message_2" id="message_2" form="usrform"></textarea>
+                                    <textarea title = "Üzenetet, véleményt, javaslatokat lehet tenni az üzemeltetőjének/cikk írójának"  rows="4" cols="50" name="message_2" id="message_2" form="usrform"></textarea>
                                 </div>
-                                <div class="hidden">
-                                    <label class="control-label col-sm-2" for="h_email_2">Rejtett Email cím</label>
-                                    <input class="form-control" type="email" name="h_email_2" id="h_email_2">
-                                </div>    
                             <div class="form-group">        
                                 <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-default">Küldés</button>
+                                <button type="submit" aria-label="A küldés gomb megnyomásával a form elküldi a megadott adatokat hozzánk, így fel tudjuk azokat dolgozni, esetleg válaszolni a kérdésekre." class="btn btn-default">Küldés</button>
                                 </div>
                             </div>
                         </div>  
@@ -358,9 +356,10 @@
         <div class="set_div re_size">    
             <a id="ugras_le"> </a>   
             <footer class="set_footer_header">
-                <a href="#ugras_fel" class="set_link"> Ugrás az oldal tetejére </a>
+                <a href="#ugras_fel" class="set_link" id="jump_up"> Ugrás az oldal tetejére </a>
             </footer>
         </div>      
         <script src="hazi.js"></script>
+        <script src="akadalymentesiteto.js"></script>
     </body>
 </html>

@@ -12,12 +12,14 @@
   --orig_fontsize_m: 16px;
   --orig_fontsize_sm: 14px;
   --orig_fontsize_s: 12px;
+  --origin_fontsize_l: 26px;
+  --origin_fontsize_ml: 24px;
   --orig_display: flex;
   --orig_div_width: 700px;
   --orig_hr_color: #7ab4d8;
   --orig_p_font_family: auto;
   --orig_head_color: lightskyblue;
-  --orig_text_shadow: #7a94a4;
+  --orig_text_shadow: 2px 2px #7a94a4;
   --orig_img_size: 250px;
   --orig_button_color: #4187b3;
   --orig_background-image: url("bracsa_hatter.jpg");
@@ -33,12 +35,15 @@
   --orig_a_visited: rgb(94, 184, 211);
   --orig_a_hover: rgb(170, 210, 212);
   --orig_width: 80%;
-  --orig_algin: auto;
+  --orig_algin: right;
   --orig_justify_margin: auto;
   --orig_left_with: 50%;
   --orig_right_with: 50%;
   --orig_form_display: none;
-  --orig_bootstrap_form_display: auto;
+  --orig_bootstrap_form_display: block;
+  --origin_h2_fontsize: 18px;
+  --origin_h2_font_hover: 30px;
+  --orig_back_drop: invert(100%);
 
   /*dark_mode*/
   --dark_brand_font: white;
@@ -142,12 +147,68 @@
   --def_right_with: var(--orig_right_with);
   --def_form_display: var(--orig_form_display);
   --def_bootstrap_form_display: var(--orig_bootstrap_form_display);
+  --def_h2_fontsize: var(--origin_h2_fontsize);
+  --def_h2_font_hover: var(--origin_h2_font_hover);
+  --def_fontsize_l: var(--origin_fontsize_l);
+  --def_fontsize_ml: var(--origin_fontsize_ml);
+  --def_back_drop : var(--orig_back_drop);
+  
+
+  /*akadálymenetesített*/
+  --v_color_black: black;
+  --v_color_white: rgb(248, 248, 248);
+  --access_brand_font: var(--v_color_black);
+  --access_form_color: var(--v_color_black);
+  --access_border_rad: 15px;
+  --access_h_font_family: Arial, cursive;
+  --access_margin_m: 25px;
+  --access_maring_sm: 20px;
+  --access_padding_margin_s: 15px;
+  --access_padding_margin_xs: 12px;
+  --access_background: transparent;
+  --access_fontsize_m: 18px;
+  --access_fontsize_sm: 14px;
+  --access_fontsize_s: 16px;
+  --access_fontsize_l: 28px;
+  --access_fontsize_ml: 26px;
+  --access_display: block;
+  --access_div_width: auto;
+  --access_hr_color: var(--v_color_black);
+  --access_p_font_family: Arial, cursive;
+  --access_head_color: var(--v_color_black);
+  --access_text_shadow: none;
+  --access_img_size: 450px;
+  --access_button_color: var(--v_color_black);
+  --access_background-image: none;
+  --access_background-repeat: no-repeat;
+  --access_background-size: cover;
+  --access_background_color: var(--v_color_white);
+  --access_first_letter_color: var(--v_color_black);
+  --access_animation: none;
+  --access_theme: var(--v_color_white);
+  --access_border: none;
+  --access_highlighter: yellow;
+  --access_a_link_color: var(--v_color_black);
+  --access_a_visited: var(--v_color_black);
+  --access_a_hover: var(--v_color_black);
+  --access_width: 70%;
+  --access_algin: right;
+  --access_justify_margin: auto;
+  --access_left_with: 100%;
+  --access_right_with: 100%;
+  --access_form_display: none;
+  --access_bootstrap_form_display: block;
+  --access_div_width: 70%;
+  --access_h2_fontsize: 30px;
+  --access_h2_font_hover: 30px;
+  --access_back_drop: none;
+
 }
 
 /*boostrap on off*/
 
 #bootstrap:checked ~ #page {
-  --def_form_display: auto;
+  --def_form_display: block;
   --def_bootstrap_form_display: none;
 }
 
@@ -182,6 +243,55 @@
   --def_right_with: var(--classic_right_with);
 }
 
+/*akadálymentesített*/
+
+#access:checked ~ #page {
+  --def_brand_font: var(--access_brand_font);
+  --def_form_color: var(--access_form_color);
+  --def_border_rad: var(--access_border_rad);
+  --def_h_font_family: var(--access_h_font_family);
+  --def_margin_m: var(--access_margin_m);
+  --def_maring_sm: var(--access_maring_sm);
+  --def_padding_margin_s: var(--access_padding_margin_s);
+  --def_padding_margin_xs: var(--access_padding_margin_xs);
+  --def_background: var(--access_background);
+  --def_fontsize_m: var(--access_fontsize_m);
+  --def_fontsize_sm: var(--access_fontsize_sm);
+  --def_fontsize_s: var(--access_fontsize_s);
+  --def_display: var(--access_display);
+  --def_div_width: var(--access_div_width);
+  --def_hr_color: var(--access_hr_color);
+  --def_p_font_family: var(--access_p_font_family);
+  --def_head_color: var(--access_head_color);
+  --def_text_shadow: var(--access_text_shadow);
+  --def_img_size: var(--access_img_size);
+  --def_button_color: var(--access_button_color);
+  --def_background-image: var(--access_background-image);
+  --def_background-repeat: var(--access_background-repeat);
+  --def_background-size: var(--access_background-size);
+  --def_background_color: var(--access_background_color);
+  --def_first_letter_color: var(--access_first_letter_color);
+  --def_animation: var(--access_animation);
+  --def_theme: var(--v_coloaccess_themer_white);
+  --def_border: var(--access_border);
+  --def_highlighter: var(--access_highlighter);
+  --def_a_link_color: var(--access_a_link_color);
+  --def_a_visited: var(--access_a_visited);
+  --def_a_hover: var(--access_a_hover);
+  --def_width: var(--access_width);
+  --def_algin: var(--access_algin);
+  --def_justify_margin: var(--access_justify_margin);
+  --def_left_with: var(--access_left_with);
+  --def_right_with: var(--access_right_with);
+  --def_form_display: var(--access_form_display);
+  --def_bootstrap_form_display: var(--access_bootstrap_form_display);
+  --def_div_width: var(--access_div_width);
+  --def_h2_fontsize: var(--access_h2_fontsize);
+  --def_h2_font_hover: var(--access_h2_font_hover);
+  --def_fontsize_l: var(--access_fontsize_l);
+  --def_fontsize_ml: var(--access_fontsize_ml);
+  --def_back_drop: var(--access_back_drop);
+}
 
 /* Dark mode */
 #dark:checked ~ #page {
@@ -240,16 +350,20 @@
 }
 
 .change_label {
-  background: var(--def_brand_font);
+  background: black;
   border: 3px solid var(--def_brand_font);
   border-radius: var(--def_border_rad);
-  color: var(--def_background_color);
+  color: white;
   cursor: pointer;
   display: inline-block;
   font-size: 125%;
   margin: 20px 0 20px 20px;
   padding: 8px 12px;
   transition: box-shadow .2s, border .2s;
+}
+
+.change_ch_label{
+  color: black;
 }
 
 .change_mode:focus + .change_label,
@@ -287,27 +401,27 @@ h1:first-letter{
 }
 
 h1{
-  text-shadow: 2px 2px var(--def_text_shadow);
+  text-shadow: var(--def_text_shadow);
   animation: var(--def_animation);
 }
 
 h2{
-  font-size: 18px;
+  font-size: var(--def_h2_fontsize);
   margin: var(--def_maring_sm);
   transition: font-size 1s ease-in-out;
 }
 
 h2:hover{
-  font-size: 28px;
+  font-size: var(--def_h2_font_hover);
 }
 
 h3{
-  font-size: 26px;
+  font-size: var(--def_fontsize_l);
   margin: var(--def_margin_m);
 }
 
 h4{
-  font-size: 24px;
+  font-size: var(--def_fontsize_ml);
   margin: 20px;
 }
 
@@ -331,8 +445,9 @@ p{
 }
 
 .set_footer_header{
-  backdrop-filter: invert(100%);
+  backdrop-filter: var(--def_back_drop);
   border-radius: var(--def_border_rad);
+  background: var(--def_background);
 }
 
 .set_menu{
@@ -643,11 +758,11 @@ a:link{
   }
 
   h2{
-    font-size: 26px;
+    font-size: var(--def_fontsize_l);
   }
 
   h3{
-    font-size: 24px;
+    font-size: var(--def_fontsize_ml);
   }
 
   h4{
